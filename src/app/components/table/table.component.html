@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <table class="wrapper__table">
+        <tr class="table-line">
+            <th class="table-line__header">Descricao</th>
+            <th class="table-line__header">Valor</th>
+            <th class="table-line__header">Tipo</th>
+        </tr>
+        <!--  -->
+        <tr class="table-line" *ngFor="let item of itens">
+            <td class="table-line__item"> {{ item.description | textTransform }} </td>
+            <td class="table-line__item"> {{ item.value | valueTransform }} </td>
+            <td class="table-line__item"> <input type="radio" checked class="cf-c-input-radio"
+                    [attr.color]="item.expense ? 'red' : 'green'" style="margin-left: 10px;" /> </td>
+            <td class="table-line__item"> <mat-icon style="margin-right: 10px;" class="table-line__icon"
+                    (click)="handleDelete(item.id)">delete</mat-icon> <mat-icon class="table-line__icon"
+                    (click)="handleEdit(item)">edit</mat-icon> </td>
+        </tr>
+        <!--  -->
+    </table>
+</div>

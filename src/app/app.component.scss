@@ -1,0 +1,16 @@
+@import "variables";
+
+.app {
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 562px) {
+  .app {
+    &__content {
+      width: 95%;
+    }
+  }
+}

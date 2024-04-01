@@ -1,0 +1,70 @@
+@import "variables";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: $primaryBgColor;
+  border-radius: 10px;
+  margin-top: -55px;
+  padding: 20px;
+  width: 350px;
+
+  &__title {
+    font-family: $secondaryFont;
+    color: $quaternaryColor;
+    font-weight: 100;
+    font-size: 22px;
+  }
+
+  &__content {
+    padding: 10px 0px;
+  }
+
+  &__value {
+    font-family: $primaryFont;
+    font-size: 50px;
+    text-align: center;
+
+    &[color="green"] {
+      color: $secondaryColor;
+    }
+
+    &[color="red"] {
+      color: $tertiaryColor;
+    }
+
+    &[color="black"] {
+      color: $quaternaryColor;
+    }
+  }
+}
+
+@media (max-width: 1504px) {
+  .card {
+    margin-left: 10px;
+    flex-grow: 1;
+    margin-right: 10px;
+    &--type--balance {
+      margin-top: 10px;
+    }
+    &__value {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 1057px) {
+  .card {
+    margin-top: 10px;
+    &--type--gain {
+      margin-top: -55px;
+    }
+    &__value {
+      font-size: 35px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.cf-c-input-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  &--cursor--pointer {
+    cursor: pointer;
+  }
+
+  &[color="red"] {
+    border: 2px solid red;
+    &::before {
+      background-color: red;
+    }
+  }
+
+  &[color="green"] {
+    border: 2px solid green;
+    &::before {
+      background-color: green;
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+  }
+
+  &:checked::before {
+    transform: scale(1);
+  }
+}

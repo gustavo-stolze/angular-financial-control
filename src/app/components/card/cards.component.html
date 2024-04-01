@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="card card--type--gain">
+        <div class="card__header">
+            <h2 class="card__title">Entradas</h2>
+        </div>
+        <div class="card__content">
+            <h1 class="card__value" color="green">{{ gainMethod() | valueTransform }}</h1>
+        </div>
+    </div>
+    <div class="card card--type--spent">
+        <div class="card__header">
+            <h2 class="card__title">Saidas</h2>
+        </div>
+        <div class="card__content">
+            <h1 class="card__value" color="red">{{ spentMethod() | valueTransform }}</h1>
+        </div>
+    </div>
+    <div class="card card--type--balance">
+        <div class="card__header">
+            <h2 class="card__title">Total</h2>
+        </div>
+        <div class="card__content">
+            <h1 class="card__value" color="black">{{ balanceMethod() | valueTransform }}</h1>
+        </div>
+    </div>
+</div>

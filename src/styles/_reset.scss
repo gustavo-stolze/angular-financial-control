@@ -1,8 +1,4 @@
-@font-face {
-  font-family: "LTSaeada";
-  src: url(../assets/fonts/LTSaeada/LTSaeada-ExtraBlack.otf);
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @font-face {
   font-family: "GramatikaTrial";
   src: url(../assets/fonts/GramatikaTrial/GramatikaTrial-Regular-BF65dea4c5a77e9.otf);
@@ -12,5 +8,5 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'GramatikaTrial';
+  font-family: "GramatikaTrial";
 }

@@ -1,0 +1,85 @@
+@import "variables";
+
+.wrapper {
+  background-color: $primaryBgColor;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 15px;
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 20px;
+    margin: 4px 8px;
+  }
+
+  &__input-text {
+    border-radius: 25px;
+    background-color: $tertiaryBgColor;
+    padding: 2px;
+  }
+
+  &__radio-section {
+    display: flex;
+  }
+
+  &__radio-wrapper {
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    color: $primaryColor;
+    background-color: $secondaryBgColor;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 100;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &--back--edit {
+      background-color: grey;
+      margin-right: 20px;
+    }
+
+    &--back--cancel {
+      background-color: $tertiaryColor;
+      padding: 5px 15px 10px 15px;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    bottom: -4px;
+  }
+}
+
+@media (max-width: 968px) {
+  .wrapper {
+    &__form {
+      justify-content: center;
+      flex-grow: 1;
+    }
+    &__button {
+      margin: 10px;
+    }
+  }
+}
